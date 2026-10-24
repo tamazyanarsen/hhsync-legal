@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Health Sync — Sign-in</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 480px; margin: 48px auto; padding: 0 16px; text-align: center; }
+    a.button { display: inline-block; margin-top: 16px; padding: 12px 20px; border-radius: 8px; background: #1a73e8; color: #fff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Health Sync</h1>
+  <p id="msg">Returning to the app…</p>
+  <a class="button" id="open" href="#">Open Health Sync</a>
+  <script>
+    // HUAWEI ID redirects here with ?code=...&state=...; hand the query over to the app.
+    // Nothing is sent anywhere else.
+    var query = location.search.substring(1);
+    var appUrl = 'intent://oauth2redirect?' + query +
+      '#Intent;scheme=dev.arsen.hhsync;package=dev.arsen.hhsync;end';
+    document.getElementById('open').href = appUrl;
+    if (query) {
+      location.replace(appUrl);
+    } else {
+      document.getElementById('msg').textContent = 'Nothing to do here.';
+    }
+  </script>
+</body>
+</html>
