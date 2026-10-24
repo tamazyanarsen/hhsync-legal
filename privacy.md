@@ -37,6 +37,7 @@ following data types from HUAWEI Health Kit:
 | Sleep (including sleep stages) | Written to Health Connect as sleep sessions |
 | Blood oxygen (SpO2) | Written to Health Connect as oxygen saturation records |
 | Body fat / weight | Written to Health Connect as body fat / weight records |
+| Heart health (heart rate variability, resting heart rate) | Written to Health Connect as heart rate variability / resting heart rate records |
 
 **Historical data:** on first use the app may read up to **one year** of past data of
 the types above, so that your history in Health Connect is complete. After that it only
