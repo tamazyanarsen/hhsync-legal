@@ -71,6 +71,11 @@ for any other purpose, and it does not use it for advertising or medical decisio
   (Android EncryptedSharedPreferences / Android Keystore).
 - No data is sent to the developer or to any server other than HUAWEI Health Kit
   (for reading) and the HUAWEI ID service (for sign-in).
+- During sign-in, HUAWEI ID returns a one-time authorization code to a static page of
+  this website (hosted on GitHub Pages), which immediately hands it over to the app on
+  your phone. The page stores nothing and sends the code nowhere else; the code cannot
+  be used without the app's credentials and expires within minutes. No health data ever
+  passes through this page.
 
 ## 5. Sharing with third parties
 
